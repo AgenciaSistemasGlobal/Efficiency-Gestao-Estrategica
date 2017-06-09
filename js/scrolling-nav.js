@@ -2,8 +2,10 @@
 $(window).scroll(function() {
     if ($(".navbar").offset().top > 50) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
+        $('#toTop').addClass('active');
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
+        $('#toTop').removeClass('active');
     }
 });
 
@@ -16,25 +18,8 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
-});
 
-$('.carousel[data-type="multi"] .item').each(function(){
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(':first');
-  }
-  next.children(':first-child').clone().appendTo($(this));
-
-  for (var i=0;i<4;i++) {
-    next=next.next();
-    if (!next.length) {
-        next = $(this).siblings(':first');
-    }
-    
-    next.children(':first-child').clone().appendTo($(this));
-  }
-});
-
-$('.carousel').carousel({
-  interval: false
+    $.get('http://127.0.0.1:8080/', function(data) {
+        $('#testaodaporra').html(data);
+    });
 });

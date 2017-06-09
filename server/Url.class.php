@@ -100,7 +100,7 @@ class Url
         // Slug?
         if ($slug) {
             // Troca tudo que não for letra ou número por um caractere ($slug)
-            $string = preg_replace('/[^a-z0-9]/i', $slug, $string);
+            $string = preg_replace('/\s/i', $slug, $string);
             // Tira os caracteres ($slug) repetidos
             $string = preg_replace('/' . $slug . '{2,}/i', $slug, $string);
             $string = trim($string, $slug);
