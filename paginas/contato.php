@@ -26,19 +26,19 @@
                                 <h4>Envie sua mensagem</h4>
                                 <form role="form">
                                     <div class="form-group">
-                                        <label for="nome">Nome:*</label>
+                                        <label for="nome">Nome</label>
                                         <input type="text" class="form-control" id="nome" name="nome" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="email">E-mail:*</label>
+                                        <label for="email">E-mail</label>
                                         <input type="email" class="form-control" id="email" name="email" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="telefone">Telefone:*</label>
+                                        <label for="telefone">Telefone</label>
                                         <input type="text" class="form-control" id="telefone" name="telefone" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="telefone">Mensagem:*</label>
+                                        <label for="telefone">Mensagem</label>
                                         <textarea class="form-control" type="textarea" id="message" rows="4"></textarea>
                                     </div>
                                     <div class="form-group">
@@ -56,11 +56,11 @@
                                         <ul class="contatos-list">
                                             <li>
                                                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                                                efficiency@gmail.com
+                                                contato@effi.com.br
                                             </li>
                                             <li>
                                                 <i class="fa fa-phone" aria-hidden="true"></i>
-                                                +55 (51) 3226-3653
+                                                +55 (51) 3062-6025
                                             </li>
                                         </ul>
                                     </div>
@@ -70,7 +70,7 @@
                                         <h4>Conecte-se com a Efficiency</h4>
                                         <ul class="list-inline">
                                             <li>
-                                                <a href="#">
+                                                <a href="https://www.facebook.com/effi.com.br">
                                                     <i class="fa fa-facebook" aria-hidden="true"></i>
                                                 </a>
                                             </li>

@@ -18,8 +18,4 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
-
-    $.get('http://127.0.0.1:8080/', function(data) {
-        $('#testaodaporra').html(data);
-    });
 });

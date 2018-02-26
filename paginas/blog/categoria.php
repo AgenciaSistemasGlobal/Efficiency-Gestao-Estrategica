@@ -1,5 +1,4 @@
 <?php
-	$categoria = $Categorias->find(URL::getIdUri($modulo1));
 	$postagensByCategoria = $Postagens->findByCategoria($currencyEmpresa['id'], $categoria['id_categoria']);
 ?>
 <section class="categorias-blog">
@@ -12,7 +11,7 @@
 		    </ul>
 		</div>
 		<div class="row">
-			<div class="col-lg-9">
+			<div class="col-lg-9 col-md-9">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="panel panel-body panel-cores-categorias" style="background-color: <?php echo $categoria['cor'] ?>">
@@ -32,7 +31,7 @@
 					<?php endforeach ?>
 				</div>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-lg-3 col-md-3">
 				<?php require "sidebar-right.php" ?>
 			</div>
 		</div>

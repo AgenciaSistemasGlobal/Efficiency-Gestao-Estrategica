@@ -45,7 +45,7 @@ class Postagens extends Conexao{
 			FROM postagens pstg
 			INNER JOIN categorias ctgs
 			ON pstg.categoria = ctgs.id_categoria
-			WHERE empresa = ?
+			WHERE pstg.empresa = ?
 			ORDER BY views DESC LIMIT 3
 		");
 		$findAll->bindValue(1, $_empresa);
@@ -61,7 +61,7 @@ class Postagens extends Conexao{
 			FROM postagens pstg
 			INNER JOIN categorias ctgs
 			ON pstg.categoria = ctgs.id_categoria
-			WHERE empresa = ? AND pstg.titulo LIKE ?
+			WHERE pstg.empresa = ? AND pstg.titulo LIKE ?
 		");
 		$findAll->bindValue(1, $_empresa);
 		$findAll->bindValue(2, "%$_like%", PDO::PARAM_STR);
@@ -77,7 +77,7 @@ class Postagens extends Conexao{
 			FROM postagens pstg
 			INNER JOIN categorias ctgs
 			ON pstg.categoria = ctgs.id_categoria
-			WHERE empresa = ?
+			WHERE pstg.empresa = ?
 			ORDER BY data DESC LIMIT 3
 		");
 		$findAll->bindValue(1, $_empresa);
@@ -93,7 +93,7 @@ class Postagens extends Conexao{
 			FROM postagens pstg
 			INNER JOIN categorias ctgs
 			ON pstg.categoria = ctgs.id_categoria
-			WHERE empresa = ? AND ctgs.id_categoria = ?
+			WHERE pstg.empresa = ? AND ctgs.id_categoria = ?
 		");
 		$findAll->bindValue(1, $_empresa);
 		$findAll->bindValue(2, $_categoria);

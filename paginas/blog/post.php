@@ -17,7 +17,7 @@
 		    </ul>
 		</div>
 		<div class="row">
-			<div class="col-lg-9">
+			<div id="body-article" class="col-lg-9 col-md-9 cada-postagem panel panel-body">
 				<header>
 					<img class="img-responsive" src="<?php echo $postagem['img'] ?>" alt="<?php echo $postagem['titulo'] ?>" title="<?php echo $postagem['titulo'] ?>">
 				</header>
@@ -74,9 +74,8 @@
 				})();
 				</script>
 				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-				                                
 			</div>
-			<div class="col-lg-3">
+			<div class="col-lg-3 col-md-3">
 				<?php require "sidebar-right.php" ?>
 			</div>
 		</div>

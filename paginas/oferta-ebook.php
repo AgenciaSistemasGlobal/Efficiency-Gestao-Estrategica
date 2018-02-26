@@ -1,8 +1,5 @@
 <?php
-	require "server/Ebooks.class.php";
-	$Ebooks = new Ebooks();
-
-	$ebook = $Ebooks->find($currencyEmpresa['ebook_header_blog']);
+	$ebook = $Ebooks->find($currencyEmpresa['ebook_header_blog'], $currencyEmpresa['id']);
 ?>
 <section class="oferta-ebook">
 	<div class="container">

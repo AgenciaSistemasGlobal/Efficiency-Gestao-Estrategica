@@ -1,18 +1,15 @@
 <?php
-	require "server/Ebooks.class.php";
-	$Ebooks = new Ebooks();
-
-	$ebook = $Ebooks->find($currencyEmpresa['ebook_header_blog']);
-
 	$nb_elem_per_page = 5;
-	$page = isset($_GET['page'])?intval($_GET['page']-1):1;
+	$page = isset($_GET['page'])?intval($_GET['page']-1):0;
 	$number_of_pages = intval(count($postagens)/$nb_elem_per_page)+1;
 	$arrayPaginated = array_slice($postagens, $page*$nb_elem_per_page, $nb_elem_per_page);
+
+	$ebook = $Ebooks->find($currencyEmpresa['ebook_header_blog'], $currencyEmpresa['id']);
 ?>
 <header id="header" class="slide">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6">
                 <h2 class="font-secundary">E-book Grátis</h2>
                 <div class="hr-detalhe white"></div>
                 <h4><?php echo $ebook['titulo'] ?></h4>
@@ -20,7 +17,7 @@
                 <br>
                 <a href="<?php echo URL::getBase() ?>lista-vip/<?php echo $ebook['id_ebook'] . '-' . URL::removeAcentos($ebook['titulo'], '_') ?>" class="btn btn-warning btn-lg">Baixe o seu agora!</a>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6">
             	<div class="row">
 	            	<div class="col-lg-offset-6 col-lg-6">
 		            	<div class="ebook-header">
@@ -44,7 +41,7 @@
 			</div>
 		<?php endif ?>
 		<div class="row">
-			<div class="col-md-9">
+			<div class="col-md-9 col-lg-9">
 				<main>
 					<?php
 						foreach ($arrayPaginated as $post):
@@ -118,7 +115,7 @@
                     </ul>
                 </nav>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 col-lg-3">
 				<?php require "sidebar-right.php" ?>
 			</div>
 		</div>

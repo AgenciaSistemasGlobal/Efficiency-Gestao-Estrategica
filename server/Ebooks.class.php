@@ -7,18 +7,28 @@ class Ebooks extends Conexao{
 		$this->pdo = parent::getDB();
 	}
 
-	public function find($_id){
+	public function find($_id, $_empresa){
 
-		$find = $this->pdo->prepare("SELECT * FROM ebooks WHERE id_ebook = ?");
+		$find = $this->pdo->prepare("
+			SELECT * 
+			FROM ebooks
+			WHERE id_ebook = ? AND empresa = ?
+		");
 		$find->bindValue(1, $_id);
+		$find->bindValue(2, $_empresa);
 		$find->execute();
-		
+
 		return parent::utf8ize($find->fetch());
 	}
 
-	public function findAll(){
+	public function findAll($_empresa){
 
-		$findAll = $this->pdo->prepare("SELECT * FROM ebooks");
+		$findAll = $this->pdo->prepare("
+			SELECT *
+			FROM ebooks
+			WHERE empresa = ?
+		");
+		$findAll->bindValue(1, $_empresa);
 		$findAll->execute();
 
 		return parent::utf8ize($findAll->fetchAll());

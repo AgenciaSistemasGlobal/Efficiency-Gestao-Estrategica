@@ -1,9 +1,3 @@
-<?php
-    require "server/Ebooks.class.php";
-    $Ebooks = new Ebooks();
-
-    $ebook = $Ebooks->find(URL::getIdUri($modulo1));
-?>
 <header id="header" class="slide landing-page">
     <div class="container">
         <div class="row">
@@ -25,7 +19,7 @@
                         </div>
                         <div class="col-lg-6 text-center">
                             <div class="ebook-header">
-                                <img src="http://exceednutrition.com/wp-content/uploads/2015/10/ebookcover.png" alt="" class="img-responsive">
+                                <img src="<?php echo $ebook['img'] ?>" alt="" class="img-responsive">
                             </div>
                         </div>
                     </div>
@@ -92,7 +86,7 @@
     <?php if($ebook): ?>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                     <h2><?php echo $ebook['sub_titulo_ebook'] ?></h2>
                     <div class="hr-detalhe red"></div>
                     <article>

@@ -2,33 +2,18 @@
     $arrServicos = [
         [
             "id"=>1,
-            "titulo"=>"Assessoria Contábil",
-            "descricao"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit, consectetur adipiscing elit."
+            "titulo"=>"Serviço Contábeis",
+            "descricao"=>"<ul><li>Assesoria Fiscal</li><li>Assessoria Departamento Pessoal</li><li>Assessoria Contábil</li></ul>"
         ],
         [
             "id"=>2,
-            "titulo"=>"Assessoria Fiscal",
-            "descricao"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit, consectetur adipiscing elit."
+            "titulo"=>"Auditoria",
+            "descricao"=>"<ul><li>Check-up Fiscal, Trabalhista, Contábil</li><li>Projeção Econômica e Financeira</li></ul>"
         ],
         [
             "id"=>3,
-            "titulo"=>"Assessoria Contábil",
-            "descricao"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit, consectetur adipiscing elit."
-        ],
-        [
-            "id"=>4,
-            "titulo"=>"Assessoria Fiscal",
-            "descricao"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit, consectetur adipiscing elit."
-        ],
-        [
-            "id"=>5,
-            "titulo"=>"Assessoria Contábil",
-            "descricao"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit, consectetur adipiscing elit."
-        ],
-        [
-            "id"=>6,
-            "titulo"=>"Assessoria Fiscal",
-            "descricao"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit, consectetur adipiscing elit."
+            "titulo"=>"Consultoria Empresarial",
+            "descricao"=>"<ul><li>Trabalhista Patronal</li><li>Administração de Dívidas Empresarias</li><li>Defesa e Parcelamento de Tributos</li></ul>"
         ]
     ];
 ?>
@@ -45,7 +30,7 @@
                             <div class="col-lg-4">
                                 <div class="cada-servico">
                                     <h3><strong><?php echo $__arrServicos['titulo'] ?></strong></h3>
-                                    <p><?php echo substr($__arrServicos['descricao'], 0, 100); echo strlen($__arrServicos['descricao'])>100 ? "[...]" : "" ?></p>
+                                    <p><?php echo $__arrServicos['descricao'] ?></p>
                                     <a href="<?php echo URL::getBase() . 'servicos/' . $__arrServicos['id'] . '-' . URL::removeAcentos($__arrServicos['titulo'], '_') ?>" title="<?php echo $__arrServicos['titulo'] ?>" class="text-danger">Saiba mais</a>
                                 </div>
                             </div>
@@ -54,7 +39,7 @@
                 </div>
             </div>
         <?php else: ?>
-            <article>
+            <article class="cada-servico">
                 <?php 
                     foreach ($arrServicos as $key => $value):
                         if($arrServicos[$key]['id'] == URL::getIdUri($modulo1)):

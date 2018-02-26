@@ -1,0 +1,19 @@
+Sitemap: http://effi.com.br/sitemap.xml
+
+User-agent: *
+Disallow: /css
+Disallow: /fonts
+Disallow: /libs
+Disallow: /js
+Disallow: /server
+
+Allow: http://effi.com.br/
+Allow: http://effi.com.br/servicos
+Allow: http://effi.com.br/parceiros
+Allow: http://effi.com.br/blog
+Allow: http://effi.com.br/contato
+Allow: http://effi.com.br/lista-vip
+Allow: http://effi.com.br/contato/me-ligue-agora
+Allow: http://effi.com.br/servicos/3-consultoria_empresarial
+Allow: http://effi.com.br/servicos/2-auditoria
+Allow: http://effi.com.br/servicos/1-serviço_contábeis

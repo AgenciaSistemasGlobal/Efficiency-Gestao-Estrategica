@@ -4,10 +4,10 @@
 */
 abstract class Conexao{
 
-	const HOST = "mysql942.umbler.com:41890";
-    const USER = "murilo-ceo";
-	const PASS = "liloeduardo0202";
-	const DB = "sistemasglobal";
+	const HOST = "localhost";
+    const USER = "root";
+	const PASS = "";
+	const DB = "effi";
 
 	private static $instance = null;
 
